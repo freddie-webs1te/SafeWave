@@ -153,15 +153,38 @@ const revealOnScroll = () => {
 window.addEventListener('scroll', revealOnScroll);
 
 // Smooth Scroll for Anchor Links
+const smoothScrollTo = (targetY, duration = 900) => {
+    const startY = window.pageYOffset;
+    const distance = targetY - startY;
+    const startTime = performance.now();
+
+    const easeInOutCubic = (t) => (
+        t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+    );
+
+    const step = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = easeInOutCubic(progress);
+        window.scrollTo(0, startY + distance * eased);
+
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        }
+    };
+
+    requestAnimationFrame(step);
+};
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            const navOffset = 88;
+            const targetY = target.getBoundingClientRect().top + window.pageYOffset - navOffset;
+            smoothScrollTo(targetY, 950);
+
             // Close mobile menu if open
             document.getElementById('mobile-menu').classList.add('hidden');
         }
