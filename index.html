@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeWave Pool Covers | Premium Safety & Protection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-['Inter'] antialiased text-slate-800 bg-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="waves" class="h-8 w-8 text-cyan-500"></i>
+                    <span class="text-2xl font-bold font-['Playfair_Display'] text-slate-900">SafeWave</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-slate-600 hover:text-cyan-600 transition-colors font-medium">Services</a>
+                    <a href="#benefits" class="text-slate-600 hover:text-cyan-600 transition-colors font-medium">Benefits</a>
+                    <a href="#gallery" class="text-slate-600 hover:text-cyan-600 transition-colors font-medium">Gallery</a>
+                    <a href="#testimonials" class="text-slate-600 hover:text-cyan-600 transition-colors font-medium">Reviews</a>
+                    <button onclick="openModal()" class="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-cyan-500/30">
+                        Get Free Quote
+                    </button>
+                </div>
+
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" class="h-6 w-6 text-slate-800"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#services" class="block px-3 py-2 text-slate-600 hover:text-cyan-600 hover:bg-cyan-50 rounded-md">Services</a>
+                <a href="#benefits" class="block px-3 py-2 text-slate-600 hover:text-cyan-600 hover:bg-cyan-50 rounded-md">Benefits</a>
+                <a href="#gallery" class="block px-3 py-2 text-slate-600 hover:text-cyan-600 hover:bg-cyan-50 rounded-md">Gallery</a>
+                <a href="#testimonials" class="block px-3 py-2 text-slate-600 hover:text-cyan-600 hover:bg-cyan-50 rounded-md">Reviews</a>
+                <button onclick="openModal()" class="w-full mt-4 bg-cyan-600 text-white px-6 py-3 rounded-full font-semibold">Get Free Quote</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?w=1920&h=1080&fit=crop" alt="Luxury Pool" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/50 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-2xl animate-fade-in-up">
+                <h1 class="text-5xl md:text-7xl font-bold font-['Playfair_Display'] text-white leading-tight mb-6">
+                    Protect What Matters Most
+                </h1>
+                <p class="text-xl text-slate-200 mb-8 leading-relaxed max-w-lg">
+                    Premium automatic and safety pool covers designed for ultimate protection, energy efficiency, and peace of mind. Custom solutions for every pool.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="openModal()" class="bg-cyan-500 hover:bg-cyan-400 text-slate-900 px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-2xl hover:shadow-cyan-500/50 flex items-center justify-center group">
+                        Get a Free Quote
+                        <i data-lucide="arrow-right" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                    <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-full font-semibold text-lg transition-all flex items-center justify-center">
+                        Explore Services
+                    </a>
+                </div>
+                
+                <div class="mt-12 flex items-center space-x-8 text-white/80">
+                    <div class="flex items-center">
+                        <i data-lucide="check-circle" class="h-5 w-5 text-cyan-400 mr-2"></i>
+                        <span class="text-sm">20 Year Warranty</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i data-lucide="check-circle" class="h-5 w-5 text-cyan-400 mr-2"></i>
+                        <span class="text-sm">ASTM Certified</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i data-lucide="check-circle" class="h-5 w-5 text-cyan-400 mr-2"></i>
+                        <span class="text-sm">24/7 Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="h-8 w-8 text-white/60"></i>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-slate-900 py-12 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="stat-item">
+                    <div class="text-4xl font-bold text-cyan-400 mb-2">15 years</div>
+                    <div class="text-slate-400 text-sm uppercase tracking-wider">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="text-4xl font-bold text-cyan-400 mb-2">10 Thousand</div>
+                    <div class="text-slate-400 text-sm uppercase tracking-wider">Covers Installed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="text-4xl font-bold text-cyan-400 mb-2">98 persent</div>
+                    <div class="text-slate-400 text-sm uppercase tracking-wider">Satisfaction Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="text-4xl font-bold text-cyan-400 mb-2">50 years</div>
+                    <div class="text-slate-400 text-sm uppercase tracking-wider">Max Lifespan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-cyan-600 font-semibold uppercase tracking-wider text-sm">Our Solutions</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-['Playfair_Display'] text-slate-900 mt-2 mb-4">Premium Pool Cover Services</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">From automatic systems to custom safety covers, we provide comprehensive protection solutions tailored to your needs.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-cyan-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-cyan-600 transition-colors duration-300">
+                        <i data-lucide="zap" class="h-8 w-8 text-cyan-600 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Automatic Covers</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">State-of-the-art motorized systems that open and close your pool with the touch of a button. Ultimate convenience meets premium safety.</p>
+                    <ul class="space-y-2 mb-6 text-sm text-slate-500">
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-cyan-500 mr-2"></i>Remote controlled</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-cyan-500 mr-2"></i>Energy efficient</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-cyan-500 mr-2"></i>Custom fitting</li>
+                    </ul>
+                    <button onclick="openModal()" class="text-cyan-600 font-semibold hover:text-cyan-700 flex items-center group/btn">
+                        Learn More <i data-lucide="arrow-right" class="h-4 w-4 ml-1 group-hover/btn:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-300">
+                        <i data-lucide="shield" class="h-8 w-8 text-blue-600 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Safety Covers</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">Mesh and solid safety covers engineered to withstand heavy loads and protect children and pets during the off-season.</p>
+                    <ul class="space-y-2 mb-6 text-sm text-slate-500">
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-cyan-500 mr-2"></i>ASTM F1346-91 certified</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-cyan-500 mr-2"></i>4000lb capacity</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-cyan-500 mr-2"></i>UV resistant</li>
+                    </ul>
+                    <button onclick="openModal()" class="text-cyan-600 font-semibold hover:text-cyan-700 flex items-center group/btn">
+                        Learn More <i data-lucide="arrow-right" class="h-4 w-4 ml-1 group-hover/btn:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors duration-300">
+                        <i data-lucide="settings" class="h-8 w-8 text-teal-600 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Custom Covers</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">Bespoke solutions for unique pool shapes, infinity edges, and specialty requirements. Hand-crafted to your exact specifications.</p>
+                    <ul class="space-y-2 mb-6 text-sm text-slate-500">
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-cyan-500 mr-2"></i>Any shape or size</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-cyan-500 mr-2"></i>Premium materials</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-cyan-500 mr-2"></i>Color options</li>
+                    </ul>
+                    <button onclick="openModal()" class="text-cyan-600 font-semibold hover:text-cyan-700 flex items-center group/btn">
+                        Learn More <i data-lucide="arrow-right" class="h-4 w-4 ml-1 group-hover/btn:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 transition-colors duration-300">
+                        <i data-lucide="wrench" class="h-8 w-8 text-indigo-600 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Maintenance</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">Comprehensive service plans including annual inspections, repairs, fabric replacement, and winterization services.</p>
+                    <ul class="space-y-2 mb-6 text-sm text-slate-500">
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-cyan-500 mr-2"></i>Annual inspections</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-cyan-500 mr-2"></i>Same-day repairs</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-cyan-500 mr-2"></i>Winterization</li>
+                    </ul>
+                    <button onclick="openModal()" class="text-cyan-600 font-semibold hover:text-cyan-700 flex items-center group/btn">
+                        Learn More <i data-lucide="arrow-right" class="h-4 w-4 ml-1 group-hover/btn:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-cyan-100 rounded-full opacity-50"></div>
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-blue-100 rounded-full opacity-50"></div>
+                    <img src="pexels-pixabay-261041.jpg" alt="Pool Cover Benefits" class="relative rounded-3xl shadow-2xl w-full object-cover h-[600px]">
+                    
+                    <div class="absolute bottom-8 left-8 bg-white rounded-2xl p-6 shadow-xl max-w-xs">
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                            </div>
+                            <span class="ml-2 text-slate-600 font-semibold">4.9/5</span>
+                        </div>
+                        <p class="text-slate-700 text-sm italic">"Best investment for our family's safety. The installation was seamless and professional."</p>
+                        <p class="text-slate-900 font-semibold mt-2 text-sm">— Sarah M., Homeowner</p>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="text-cyan-600 font-semibold uppercase tracking-wider text-sm">Why Choose Us</span>
+                    <h2 class="text-4xl md:text-5xl font-bold font-['Playfair_Display'] text-slate-900 mt-2 mb-6">Benefits That Make a Difference</h2>
+                    <p class="text-slate-600 text-lg mb-12">Our pool covers provide more than just protection—they deliver peace of mind, savings, and a safer environment for your loved ones.</p>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start group">
+                            <div class="flex-shrink-0 w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center group-hover:bg-red-500 transition-colors duration-300">
+                                <i data-lucide="heart-handshake" class="h-7 w-7 text-red-600 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Ultimate Child & Pet Safety</h3>
+                                <p class="text-slate-600 leading-relaxed">ASTM-certified safety covers capable of supporting thousands of pounds, preventing accidental submersion and providing complete peace of mind for families with children and pets.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start group">
+                            <div class="flex-shrink-0 w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center group-hover:bg-green-500 transition-colors duration-300">
+                                <i data-lucide="leaf" class="h-7 w-7 text-green-600 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Energy Efficiency & Savings</h3>
+                                <p class="text-slate-600 leading-relaxed">Reduce heating costs by up to 70% and chemical usage by 50%. Our covers minimize evaporation and retain heat, saving you hundreds annually while conserving water.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start group">
+                            <div class="flex-shrink-0 w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
+                                <i data-lucide="hammer" class="h-7 w-7 text-blue-600 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Unmatched Durability</h3>
+                                <p class="text-slate-600 leading-relaxed">Engineered with marine-grade materials and reinforced stitching to withstand harsh weather, UV exposure, and heavy loads. Built to last 15-50 years depending on cover type.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start group">
+                            <div class="flex-shrink-0 w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center group-hover:bg-purple-500 transition-colors duration-300">
+                                <i data-lucide="sparkles" class="h-7 w-7 text-purple-600 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Crystal Clear Water</h3>
+                                <p class="text-slate-600 leading-relaxed">Keep debris, leaves, and contaminants out of your pool. Spend less time cleaning and more time enjoying pristine, ready-to-swim water whenever you desire.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-cyan-400 font-semibold uppercase tracking-wider text-sm">Our Work</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-['Playfair_Display'] text-white mt-2 mb-4">Recent Installations</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">Browse our portfolio of custom pool cover installations across residential and commercial properties.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer">
+                    <img src="1.jpeg" alt="Automatic Pool Cover" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Automatic Cover System</h3>
+                            <p class="text-cyan-400 text-sm">Residential Villa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer">
+                    <img src="cc.jpg" alt="Safety Cover" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Mesh Safety Cover</h3>
+                            <p class="text-cyan-400 text-sm">Family Home</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer">
+                    <img src="ll.jpg" alt="Custom Shape" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Freeform Custom Fit</h3>
+                            <p class="text-cyan-400 text-sm">Luxury Estate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer">
+                    <img src="mm.jpg" alt="Commercial Pool" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Commercial Installation</h3>
+                            <p class="text-cyan-400 text-sm">Resort & Spa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer">
+                    <img src="qq.jpg" alt="Winter Cover" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Solid Winter Cover</h3>
+                            <p class="text-cyan-400 text-sm">Mountain Retreat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer">
+                    <img src="rr.webp" alt="Infinity Pool" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Infinity Edge Solution</h3>
+                            <p class="text-cyan-400 text-sm">Modern Architecture</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-cyan-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-cyan-600 font-semibold uppercase tracking-wider text-sm">Testimonials</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-['Playfair_Display'] text-slate-900 mt-2 mb-4">What Our Clients Say</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">Don't just take our word for it—hear from homeowners who have transformed their pool safety and maintenance.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 mb-6 italic">"The automatic cover has been a game-changer for our family. Not only is it incredibly convenient, but I finally have peace of mind knowing my toddlers are safe around the pool."</p>
+                    <div class="flex items-center">
+                        <img src="yy.jpg" alt="Customer" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-slate-900">Jennifer Walsh</h4>
+                            <p class="text-slate-500 text-sm">Homeowner, Florida</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 mb-6 italic">"Professional installation, top-quality materials, and exceptional customer service. Our heating bill dropped by 60% the first month. Worth every penny!"</p>
+                    <div class="flex items-center">
+                        <img src="pexels-pixabay-261041.jpg" alt="Customer" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-slate-900">Michael Chen</h4>
+                            <p class="text-slate-500 text-sm">Property Owner, California</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                        <i data-lucide="star" class="h-5 w-5 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 mb-6 italic">"We have a uniquely shaped pool and thought a cover was impossible. AquaShield created a perfect custom solution. The craftsmanship is outstanding."</p>
+                    <div class="flex items-center">
+                        <img src="http://static.photos/people/200x200/3" alt="Customer" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-slate-900">Amanda Foster</h4>
+                            <p class="text-slate-500 text-sm">Designer, Arizona</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-to-br from-cyan-600 to-blue-700 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0,50 Q25,30 50,50 T100,50 L100,100 L0,100 Z" fill="white">
+                    <animate attributeName="d" dur="10s" repeatCount="indefinite" values="M0,50 Q25,30 50,50 T100,50 L100,100 L0,100 Z;M0,50 Q25,70 50,50 T100,50 L100,100 L0,100 Z;M0,50 Q25,30 50,50 T100,50 L100,100 L0,100 Z"/>
+                </path>
+            </svg>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold font-['Playfair_Display'] text-white mb-6">Ready to Protect Your Pool?</h2>
+            <p class="text-cyan-100 text-xl mb-10 max-w-2xl mx-auto">Get a free, no-obligation quote customized for your pool specifications. Our experts are ready to help you choose the perfect cover solution.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button onclick="openModal()" class="bg-white text-cyan-700 px-10 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-2xl hover:shadow-white/20 flex items-center">
+                    Get Your Free Quote Now
+                    <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                </button>
+                <a href="tel:+1234567890" class="text-white hover:text-cyan-200 font-semibold text-lg flex items-center transition-colors">
+                    <i data-lucide="phone" class="mr-2 h-5 w-5"></i>
+                    Call 081-761-6547
+                </a>
+            </div>
+            
+            <p class="text-cyan-200 mt-6 text-sm">Free consultation • 20-year warranty • Professional installation</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <i data-lucide="waves" class="h-8 w-8 text-cyan-500"></i>
+                        <span class="text-2xl font-bold font-['Playfair_Display'] text-white">SafeWave</span>
+                    </div>
+                    <p class="text-slate-400 mb-6">Premium pool protection solutions designed for safety, efficiency, and peace of mind. Protecting families since 2009.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors">
+                            <i data-lucide="facebook" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors">
+                            <i data-lucide="instagram" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors">
+                            <i data-lucide="twitter" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="hover:text-cyan-400 transition-colors">Automatic Covers</a></li>
+                        <li><a href="#services" class="hover:text-cyan-400 transition-colors">Safety Covers</a></li>
+                        <li><a href="#services" class="hover:text-cyan-400 transition-colors">Custom Solutions</a></li>
+                        <li><a href="#services" class="hover:text-cyan-400 transition-colors">Maintenance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">About Us</a></li>
+                        <li><a href="#gallery" class="hover:text-cyan-400 transition-colors">Our Work</a></li>
+                        <li><a href="#testimonials" class="hover:text-cyan-400 transition-colors">Testimonials</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="h-5 w-5 mr-3 text-cyan-500 flex-shrink-0 mt-0.5"></i>
+                            <span>123 Poolside Avenue<br>Miami, FL 33101</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="phone" class="h-5 w-5 mr-3 text-cyan-500"></i>
+                            <span>081-761-6547</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="mail" class="h-5 w-5 mr-3 text-cyan-500"></i>
+                            <span>info@SafeWave.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-500 text-sm">&copy; 2024 SafeWave Pool Covers. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
+                    <a href="#" class="text-slate-500 hover:text-slate-300">Privacy Policy</a>
+                    <a href="#" class="text-slate-500 hover:text-slate-300">Terms of Service</a>
+                    <a href="#" class="text-slate-500 hover:text-slate-300">Warranty Info</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quote Modal -->
+    <div id="quoteModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 bg-slate-900/75 transition-opacity" aria-hidden="true" onclick="closeModal()"></div>
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            
+            <div class="inline-block align-bottom bg-white rounded-2xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg w-full">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start">
+                        <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-2xl leading-6 font-bold text-slate-900 font-['Playfair_Display']" id="modal-title">Get Your Free Quote</h3>
+                                <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600">
+                                    <i data-lucide="x" class="h-6 w-6"></i>
+                                </button>
+                            </div>
+                            <p class="text-sm text-slate-500 mb-6">Fill out the form below and our pool cover specialists will contact you within 24 hours with a customized estimate.</p>
+                            
+                            <form id="quoteForm" class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-slate-700">Full Name</label>
+                                    <input type="text" id="name" required class="mt-1 block w-full rounded-lg border-slate-300 border px-4 py-2 focus:border-cyan-500 focus:ring-cyan-500 outline-none transition-colors">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-slate-700">Email Address</label>
+                                    <input type="email" id="email" required class="mt-1 block w-full rounded-lg border-slate-300 border px-4 py-2 focus:border-cyan-500 focus:ring-cyan-500 outline-none transition-colors">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-slate-700">Phone Number</label>
+                                    <input type="tel" id="phone" required class="mt-1 block w-full rounded-lg border-slate-300 border px-4 py-2 focus:border-cyan-500 focus:ring-cyan-500 outline-none transition-colors">
+                                </div>
+                                <div>
+                                    <label for="poolType" class="block text-sm font-medium text-slate-700">Pool Type</label>
+                                    <select id="poolType" required class="mt-1 block w-full rounded-lg border-slate-300 border px-4 py-2 focus:border-cyan-500 focus:ring-cyan-500 outline-none transition-colors bg-white">
+                                        <option value="">Select an option</option>
+                                        <option value="inground">Inground Pool</option>
+                                        <option value="above">Above Ground Pool</option>
+                                        <option value="commercial">Commercial Pool</option>
+                                        <option value="other">Other/Not Sure</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="coverType" class="block text-sm font-medium text-slate-700">Interested In</label>
+                                    <select id="coverType" required class="mt-1 block w-full rounded-lg border-slate-300 border px-4 py-2 focus:border-cyan-500 focus:ring-cyan-500 outline-none transition-colors bg-white">
+                                        <option value="">Select cover type</option>
+                                        <option value="automatic">Automatic Pool Cover</option>
+                                        <option value="safety">Safety Cover (Mesh/Solid)</option>
+                                        <option value="custom">Custom Solution</option>
+                                        <option value="maintenance">Maintenance/Repair</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="w-full bg-cyan-600 text-white rounded-lg py-3 px-4 font-semibold hover:bg-cyan-700 transition-colors shadow-lg hover:shadow-cyan-500/30 mt-6">
+                                    Request Quote
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
